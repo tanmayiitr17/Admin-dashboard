@@ -40,6 +40,8 @@ const App = () => {
       <div className="dashboard">
         <Sidebar summary={summary} />
         <main className="main-content">
+          <Toggle onToggle={handleToggle} />
+          <DarkModeToggle onToggle={handleDarkModeToggle} />
           <ErrorBoundary>
             <div style={{ display: "flex !important", gap: "15vh !important" }}>
               <LineChart data={lineChartData} />
@@ -47,8 +49,6 @@ const App = () => {
               <ThirdChart data={[10, 20, 30, 40, 50, 60, 70]} />
             </div>
           </ErrorBoundary>
-          <Toggle onToggle={handleToggle} />
-          <DarkModeToggle onToggle={handleDarkModeToggle} />
         </main>
       </div>
     </div>
